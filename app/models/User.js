@@ -692,7 +692,7 @@ module.exports = (User = (function() {
       if (options == null) { options = {}; }
       options.type = 'POST';
       options.url = '/auth/logout';
-      __guardMethod__(FB, 'logout', o => o.logout());
+      __guardMethod__(window.FB, 'logout', o => o.logout());
       if (options.success == null) { options.success = () => {
         globalVar.application.tracker.identifyAfterNextPageLoad();
         return globalVar.application.tracker.resetIdentity().finally(() => {
