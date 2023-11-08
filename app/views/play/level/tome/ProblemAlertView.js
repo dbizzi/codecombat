@@ -58,7 +58,7 @@ module.exports = (ProblemAlertView = (function() {
     constructor(options) {
       super(options);
       this.onWindowResize = this.onWindowResize.bind(this);
-      this.supermodel = options.supermodel; // Has to go before super so events are hooked up
+      // this.supermodel = options.supermodel; // Has to go before super so events are hooked up
       this.level = options.level;
       this.session = options.session;
       if (options.problem != null) {
